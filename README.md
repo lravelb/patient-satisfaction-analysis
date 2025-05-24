@@ -1,44 +1,65 @@
-# 🏥 Patient Sentiment and Satisfaction in Healthcare  
-**Uncovering Insights through NLP, LLMs and Predictive Analytics**
+# 🏥 Patient Satisfaction Analysis
 
-## 📌 Project Summary
+This project analyzes a hospital patient satisfaction survey to identify which factors are most associated with high or low satisfaction levels.
 
-This project explores the intersection of patient sentiment and satisfaction within healthcare services. Using two complementary datasets — one containing free-text hospital reviews and the other structured patient satisfaction data — the goal is to extract actionable insights that support smarter, data-driven decisions in the healthcare industry.
+## Objective
 
-## 🎯 Objectives
+- Analyze the key factors influencing **overall patient satisfaction**.
+- Understand the distribution of ratings across different variables.
+- Identify patterns of dissatisfaction and satisfaction.
+- Prepare the data for predictive modeling (classification and regression).
 
-- Apply **Natural Language Processing (NLP)** techniques and **Large Language Models (LLMs)** to classify patient reviews by sentiment and identify common topics and concerns.
-- Correlate unstructured sentiment data with structured patient satisfaction indicators (e.g. wait times, service quality).
-- Develop a **predictive model** to estimate satisfaction scores using selected patient and service features.
-- Create an **interactive dashboard** with Power BI or Tableau.
-- Demonstrate how AI can enhance healthcare feedback analysis and ultimately improve patient experience and outcomes.
+## Dataset
 
-## 🛠️ Technologies Used
+The dataset contains responses from a hospital satisfaction survey, including:
 
-- **Python**: Pandas, Scikit-learn, NLTK, Transformers, XGBoost
-- **NLP & LLMs**: Hugging Face, spaCy, OpenAI API
-- **Visualization**: Power BI / Tableau, Seaborn, Plotly
-- **Jupyter Notebooks**, Git/GitHub
+- **Target variable**: Overall satisfaction level (`satisfaction_in_rm`)
+- **Independent variables**: Ratings of aspects like `time_waiting`, `hygiene`, `communication_with_dr`, etc., on a scale from 1 to 5.
 
-## 📂 Project Structure
+## Project Structure
 
-/data           <- Datasets (raw and processed)  
-/notebooks      <- Jupyter notebooks with EDA and modeling  
-/src            <- Python scripts (preprocessing, modeling)  
-/models         <- Trained model files  
-/reports        <- Visuals, charts and summaries  
-README.md       <- Project description  
-requirements.txt<- Dependencies  
+patient_satisfaction_analysis/  
+├── data/                  # Raw and processed datasets  
+│   ├── raw/               # Original raw data files  
+│   ├── processed/         # Cleaned and transformed datasets  
+├── notebooks/             # Jupyter notebooks with EDA, cleaning, and modeling  
+├── scripts/               # Python scripts for data processing and modeling  
+├── reports/               # Visualizations and analysis reports  
+├── requirements.txt       # Project dependencies  
+└── README.md              # Project overview and documentation  
 
-## 💡 Business Relevance
+## Process
 
-This project simulates a real-world scenario for a healthcare tech company like **Philips**, where understanding patient experience is critical. By combining sentiment analysis, predictive modeling, and dashboarding, it showcases how AI can improve strategic decision-making and elevate patient care.
+1. **Data cleaning**
+   - Renamed columns for clarity
+   - Handled missing values and checked data ranges
 
-## 📦 Installation
+2. **Value mapping**
+   - Converted numeric ratings (1–5) to readable labels (`Satisfied`, `Unsatisfied`, etc.)
 
-```bash
-git clone https://github.com/lravelb/patient-sentiment-healthcare.git
-cd patient-sentiment-healthcare
-pip install -r requirements.txt
+3. **Exploratory data analysis**
+   - Distribution plots of the target and independent variables
+   - Correlation heatmap to find relationships between variables
+   - Average ratings grouped by satisfaction levels
+   - Visualizations comparing satisfaction categories
+
+4. **Predictive modeling**
+   - Classification and regression models built to predict satisfaction
+   - Model evaluation and feature importance analysis completed
+
+## Conclusions
+
+- Most variables show varied correlation with overall satisfaction, generally low to moderate.
+- Certain aspects like appointment time and communication with doctors are more closely linked to dissatisfaction.
+- The dataset offers useful insights for improving patient experience.
+
+## Next Steps
+
+- Extend analysis integrating patient reviews with NLP and sentiment analysis.
+- Deploy models into a pipeline for real-time patient feedback prediction.
+
+---
+
+If you have any questions or want to collaborate, feel free to reach out!
 
 
