@@ -37,7 +37,7 @@ This project simulates a real-world scenario for a healthcare tech company like 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/patient-sentiment-healthcare.git
+git clone https://github.com/lravelb/patient-sentiment-healthcare.git
 cd patient-sentiment-healthcare
 pip install -r requirements.txt
 
