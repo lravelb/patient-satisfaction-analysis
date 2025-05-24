@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+xgboost
+nltk
+spacy
+transformers
+openai
+matplotlib
+seaborn
+plotly
+jupyter
+powerbiclient
