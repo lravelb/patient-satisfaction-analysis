@@ -35,8 +35,7 @@ We apply exploratory data analysis, correlation analysis, and a Random Forest cl
 
 ```bash
 patient_satisfaction_analysis/
-├── data/
-│   ├── raw/           # Original dataset
+├── data_raw/          # Original dataset
 ├── notebooks/         # Jupyter notebooks with analysis and modeling
 ├── requirements.txt   # Python dependencies
 └── README.md          # Project documentation
